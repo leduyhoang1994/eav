@@ -64,4 +64,9 @@ class AttributeGroup extends Model
             ->select(['attributes.*', 'entity_attributes.sequence'])
             ->orderBy('entity_attributes.sequence');
     }
+
+    public function processRules()
+    {
+        return $this->hasMany(AttributeGroupProcessRule::class, 'group_id', 'attribute_group_id');
+    }
 }
