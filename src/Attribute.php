@@ -449,7 +449,7 @@ class Attribute extends Model
      */
     public function usesSource()
     {
-        return ($this->getAttribute('frontend_type') === 'select' || $this->getAttribute('frontend_type') === 'multiselect')
+        return ($this->getAttribute('frontend_type') === 'package' || $this->getAttribute('frontend_type') === 'select' || $this->getAttribute('frontend_type') === 'multiselect')
             && !empty($this->getAttribute('source_class'));
     }
 
